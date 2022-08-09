@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, Platform, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, Platform, Image, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
@@ -33,8 +33,11 @@ export default function App() {
                 }} />
                 <View style={styles.descriptionRightBox} >
                   <Text style={styles.descriptionText} >A team of explorers travel through a wormhole in space  in an attempt to ensure humanity's survival.</Text>
-                  <View style={styles.descriptionBtn}>
-                    <Text style={styles.descriptionBtnText}>+ add to watchlist</Text>
+                  <View>
+                    <TouchableOpacity style={styles.descriptionBtn}>
+                      <Text style={styles.descriptionBtnText}>+ add to watchlist</Text>
+                    </TouchableOpacity>
+
                   </View>
                 </View>
 
@@ -71,7 +74,10 @@ export default function App() {
           <View style={styles.castContainer}>
             <View style={styles.titleContainer}>
               <Text style={styles.title}>Top Billed Cast</Text>
-              <Text style={styles.blue}>SEE ALL</Text>
+              <TouchableOpacity>
+                <Text style={styles.blue}>SEE ALL</Text>
+              </TouchableOpacity>
+
             </View>
             <ScrollView style={styles.actorsCarroussel} horizontal={true}>
               <View style={styles.actor}>
