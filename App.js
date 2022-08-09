@@ -79,7 +79,7 @@ export default function App() {
               </TouchableOpacity>
 
             </View>
-            <ScrollView style={styles.actorsCarroussel} horizontal={true}>
+            <ScrollView style={styles.actorsCarroussel} horizontal={true} showsHorizontalScrollIndicator={false}>
               <View style={styles.actor}>
                 <Image style={styles.actorImage} source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Matthew_McConaughey_2019_%2848648344772%29.jpg/480px-Matthew_McConaughey_2019_%2848648344772%29.jpg" }} />
                 <View style={styles.nameCharActor}>
